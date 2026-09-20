@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bir">#45C77F</color>
+    <color name="darkbir">#085447</color>
+    <color name="pink">#DD1C45</color>
+    <color name="darkpink">#240821</color>
+    <color name="blue">#74103835</color>
+    <color name="proz">#00106835</color>
+    <color name="hint">#79B1A0</color>
+
+</resources>

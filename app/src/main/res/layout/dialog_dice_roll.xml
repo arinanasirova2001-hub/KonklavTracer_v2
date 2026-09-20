@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvDiceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Проверка аспекта"
+        android:textSize="20sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvAspectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Аспект"
+        android:textSize="18sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Кубики -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/ivDice1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dice_empty"
+            android:layout_margin="4dp"/>
+
+        <ImageView
+            android:id="@+id/ivDice2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dice_empty"
+            android:layout_margin="4dp"/>
+
+        <ImageView
+            android:id="@+id/ivDice3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dice_empty"
+            android:layout_margin="4dp"/>
+
+        <ImageView
+            android:id="@+id/ivDice4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dice_empty"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+    <!-- Результат -->
+    <TextView
+        android:id="@+id/tvRollResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:paddingBottom="16dp"/>
+
+    <!-- Кнопка броска -->
+    <Button
+        android:id="@+id/btnRollDice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Бросить кубики"
+        android:textSize="18sp"
+        android:textColor="@color/bir"
+        android:background="@drawable/itembrightbtn"
+        android:padding="12dp"/>
+
+    <!-- Кнопка закрытия -->
+    <Button
+        android:id="@+id/btnCloseDice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Закрыть"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:background="@drawable/itembrightbtn"/>
+</LinearLayout>

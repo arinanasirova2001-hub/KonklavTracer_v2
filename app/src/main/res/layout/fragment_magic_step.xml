@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Выбор ветви магии -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Есть ли у тебя ветвь магии?"
+            android:textSize="18sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioNoMagic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Нет магии"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Равновесие"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <RadioButton
+                android:id="@+id/radioWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Слова"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <RadioButton
+                android:id="@+id/radioFlame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Пламя"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <RadioButton
+                android:id="@+id/radioLife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Жизнь"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+        </RadioGroup>
+
+        <!-- Направление для Равновесия -->
+        <LinearLayout
+            android:id="@+id/layoutBalanceDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбери направление:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupBalanceDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Свет"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Тень"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Направление для Жизни -->
+        <LinearLayout
+            android:id="@+id/layoutLifeDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбери направление:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:paddingBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupLifeDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioShaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Шаман"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioShapeshifter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Перевёртыш"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+            </RadioGroup>
+
+            <!-- Выбор животного для перевёртыша -->
+            <LinearLayout
+                android:id="@+id/layoutAnimalType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выбери животное:"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerAnimalType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/itembrightbtn"
+                    android:padding="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

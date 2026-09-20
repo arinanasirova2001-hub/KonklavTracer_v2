@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Имя персонажа -->
+        <TextView
+            android:id="@+id/tvCharacterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Имя персонажа"
+            android:textSize="28sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- Информация о расе -->
+        <TextView
+            android:id="@+id/tvCharacterRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Раса: "
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Здоровье -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Здоровье:"
+                android:textSize="18sp"
+                android:textColor="@color/bir"/>
+
+            <TextView
+                android:id="@+id/tvHealthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:textStyle="bold"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+            <ImageView
+                android:id="@+id/ivEditHealth"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:padding="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutHealth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Аспекты -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Аспекты:"
+            android:textSize="18sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutAspects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"/>
+
+        <!-- Ресурсы -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ресурсы:"
+            android:textSize="18sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Медные монеты -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Медь:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinus10Copper"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinusCopper"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <TextView
+                android:id="@+id/tvCopper"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnPlusCopper"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnPlus10Copper"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+        </LinearLayout>
+
+        <!-- Серебряные монеты -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Серебро:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinus10Silver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinusSilver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <TextView
+                android:id="@+id/tvSilver"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnPlusSilver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnPlus10Silver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+        </LinearLayout>
+
+        <!-- Золотые монеты -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Золото:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinus10Gold"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinusGold"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <TextView
+                android:id="@+id/tvGold"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnPlusGold"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnPlus10Gold"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+        </LinearLayout>
+
+        <!-- Стрелы -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Стрелы:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinus10Arrows"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnMinusArrows"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <TextView
+                android:id="@+id/tvArrows"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnPlusArrows"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+
+            <Button
+                android:id="@+id/btnPlus10Arrows"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+10"
+                android:textColor="@color/darkbir"
+                android:background="@color/bir"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

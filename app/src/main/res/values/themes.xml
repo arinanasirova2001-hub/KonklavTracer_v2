@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.KonklavTracer_v2" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="DopTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:background">@color/proz</item>
+        <item name="background">@color/proz</item>
+        <item name="android:textColor">@color/bir</item>
+        <item name="android:textSize">45dp</item>
+        <item name="android:fontFamily">@font/highlinerregular</item>
+        <item name="colorOnPrimary">@color/bir</item>
+        <item name="colorControlNormal">@color/bir</item>
+        <item name="navigationIconTint">@color/bir</item>
+    </style>
+
+    <style name="prostotext" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:background">@color/proz</item>
+        <item name="background">@color/proz</item>
+        <item name="android:textColor">@color/bir</item>
+    </style>
+
+    <style name="Theme.KonklavTracer_v2" parent="Base.Theme.KonklavTracer_v2" />
+
+</resources>

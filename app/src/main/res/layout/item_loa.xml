@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:layout_marginBottom="8dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/cbLoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLoaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Лоа"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:paddingStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Для Огун: выбор между Телосложением и Дракой -->
+    <RadioGroup
+        android:id="@+id/radioGroupOgun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingStart="40dp"
+        android:paddingTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radioOgunConstitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Телосложение +1"
+            android:textSize="14sp"
+            android:textColor="@color/bir"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioOgunMelee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Драка +1"
+            android:textSize="14sp"
+            android:textColor="@color/bir"/>
+    </RadioGroup>
+
+    <!-- Для Дамбала: выбор между Восприятием и Бдительностью -->
+    <RadioGroup
+        android:id="@+id/radioGroupDamballa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingStart="40dp"
+        android:paddingTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radioDamballaPerception"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Восприятие +1"
+            android:textSize="14sp"
+            android:textColor="@color/bir"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioDamballaVigilance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Бдительность +1"
+            android:textSize="14sp"
+            android:textColor="@color/bir"/>
+    </RadioGroup>
+</LinearLayout>

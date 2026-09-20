@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:fitsSystemWindows="true">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/tvStepTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Шаг 1: Базовая информация"
+        android:textSize="20sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textStyle="bold"/>
+
+    <!-- Шаг 1: Базовая информация -->
+    <ScrollView
+        android:id="@+id/step1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Имя персонажа -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя персонажа:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:paddingBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите имя"
+                android:textColor="@color/bir"
+                android:textColorHint="@color/bir"
+                android:background="@drawable/itembrightbtn"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:inputType="text"/>
+
+            <!-- Раса -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Раса:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerRace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/itembrightbtn"
+                android:padding="12dp"/>
+
+            <!-- Подраса -->
+            <LinearLayout
+                android:id="@+id/layoutSubrace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Подраса:"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerSubrace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/itembrightbtn"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+            <!-- Свободные очки -->
+            <TextView
+                android:id="@+id/tvFreePointsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Свободных очков: 4"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp"
+                android:textStyle="bold"/>
+
+            <!-- Аспекты -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Распределение очков:"
+                android:textColor="@color/bir"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutAspects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Шаг 2: Магия -->
+    <ScrollView
+        android:id="@+id/step2Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Есть ли у тебя ветвь магии?"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioNoMagic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Нет магии"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/radioBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Равновесие"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+
+                <RadioButton
+                    android:id="@+id/radioWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Слова"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+
+                <RadioButton
+                    android:id="@+id/radioFlame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Пламя"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+
+                <RadioButton
+                    android:id="@+id/radioLife"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Жизнь"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"/>
+            </RadioGroup>
+
+            <!-- Направление для Равновесия -->
+            <LinearLayout
+                android:id="@+id/layoutBalanceDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выбери направление:"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupBalanceDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Свет"
+                        android:textSize="16sp"
+                        android:textColor="@color/bir"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioShadow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Тень"
+                        android:textSize="16sp"
+                        android:textColor="@color/bir"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Направление для Жизни -->
+            <LinearLayout
+                android:id="@+id/layoutLifeDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выбери направление:"
+                    android:textSize="16sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupLifeDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioShaman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Шаман"
+                        android:textSize="16sp"
+                        android:textColor="@color/bir"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioShapeshifter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Перевёртыш"
+                        android:textSize="16sp"
+                        android:textColor="@color/bir"/>
+                </RadioGroup>
+
+                <!-- Выбор животного -->
+                <LinearLayout
+                    android:id="@+id/layoutAnimalType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Выбери животное:"
+                        android:textSize="16sp"
+                        android:textColor="@color/bir"
+                        android:paddingBottom="8dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerAnimalType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/itembrightbtn"
+                        android:padding="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Шаг 3: Базовые умения -->
+    <ScrollView
+        android:id="@+id/step3Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvBaseSpellsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Базовые умения:"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutBaseSpells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Шаг 4: Специалитеты -->
+    <ScrollView
+        android:id="@+id/step4Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Специалитеты:"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tvSpecializationsNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutSpecializations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/step5Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Неветвийная магия:"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите уровень для каждой школы (0 = нет)"
+                android:textSize="14sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutUniversalMagic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Шаг 6: Достижения -->
+    <ScrollView
+        android:id="@+id/step6Layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Достижения:"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutAchievements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- Разделитель -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bir"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Бонус здоровья от артефактов -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Дополнительное здоровье от артефактов:"
+                android:textSize="16sp"
+                android:textColor="@color/bir"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnMinusArtifactHealth"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textSize="20sp"
+                    android:textColor="@color/bir"
+                    android:background="@drawable/itembrightbtn"/>
+
+                <TextView
+                    android:id="@+id/tvArtifactHealth"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textColor="@color/bir"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btnPlusArtifactHealth"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:textColor="@color/bir"
+                    android:background="@drawable/itembrightbtn"/>
+            </LinearLayout>
+
+            <!-- Подсказка -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Посчитайте сами, сколько здоровья дают ваши артефакты"
+                android:textSize="12sp"
+                android:textColor="@color/bir"
+                android:gravity="center"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Кнопки навигации -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Назад"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/itembrightbtn"
+            android:text="Далее"
+            android:textColor="@color/bir"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

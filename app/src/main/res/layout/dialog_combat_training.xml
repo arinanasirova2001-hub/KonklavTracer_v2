@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Боевая подготовка"
+        android:textSize="20sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите боевой навык:"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:paddingBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCombat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioMelee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Драка"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioShooting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стрельба"
+            android:textSize="16sp"
+            android:textColor="@color/bir"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите физический навык:"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPhysical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioConstitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Телосложение"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioAgility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ловкость"
+            android:textSize="16sp"
+            android:textColor="@color/bir"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSaveCombatTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Сохранить"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:background="@drawable/itembrightbtn"/>
+</LinearLayout>

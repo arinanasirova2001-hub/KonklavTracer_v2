@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заметка"
+        android:textSize="20sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заголовок:"
+        android:textSize="14sp"
+        android:textColor="@color/bir"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите заголовок"
+        android:textColor="@color/bir"
+        android:textColorHint="@color/bir"
+        android:background="@drawable/itembrightbtn"
+        android:padding="8dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Содержание:"
+        android:textSize="14sp"
+        android:textColor="@color/bir"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etNoteContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите текст"
+        android:textColor="@color/bir"
+        android:textColorHint="@color/bir"
+        android:background="@drawable/itembrightbtn"
+        android:padding="8dp"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:gravity="top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/btnCancelNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Отмена"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"/>
+
+        <Button
+            android:id="@+id/btnSaveNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Сохранить"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"/>
+    </LinearLayout>
+</LinearLayout>

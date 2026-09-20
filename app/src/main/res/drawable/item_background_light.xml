@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"> <!-- Ключевое изменение: oval вместо rectangle -->
+    <solid android:color="@color/bir"/> <!-- Ваш цвет -->
+    <size
+        android:width="56dp"/>  <!-- Рекомендуемый минимальный размер -->
+    android:height="56dp"/>
+</shape>

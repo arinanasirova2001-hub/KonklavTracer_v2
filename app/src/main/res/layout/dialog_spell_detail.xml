@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/itembrightbtn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название"
+            android:textSize="22sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDetailInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Информация"
+            android:textSize="14sp"
+            android:textColor="@color/bir"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:paddingBottom="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bir"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tvRecipeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="РЕЦЕПТ"
+                android:textSize="18sp"
+                android:textColor="@color/bir"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingBottom="12dp"/>
+
+            <!-- Блок: Дозировка / Носитель -->
+            <LinearLayout
+                android:id="@+id/blockDosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRecipeDosageLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Дозировка:"
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvRecipeDosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="12dp"/>
+            </LinearLayout>
+
+            <!-- Блок: Состав -->
+            <LinearLayout
+                android:id="@+id/blockIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvIngredientsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Состав:"
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp"/>
+            </LinearLayout>
+
+            <!-- Блок: Приготовление / Начертание -->
+            <LinearLayout
+                android:id="@+id/blockPreparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPreparationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Приготовление:"
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvRecipePreparation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="12dp"/>
+            </LinearLayout>
+
+            <!-- Блок: Время действия -->
+            <LinearLayout
+                android:id="@+id/blockDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRecipeDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="@color/bir"
+                    android:paddingBottom="8dp"/>
+            </LinearLayout>
+
+            <!-- Блок: Комментарии -->
+            <TextView
+                android:id="@+id/tvRecipeComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/bir"
+                android:textStyle="italic"
+                android:paddingBottom="8dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCloseDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Закрыть"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тропа Любви"
+        android:textSize="20sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите учение:"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:paddingBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupLovePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioPassion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Страсть"
+            android:textSize="16sp"
+            android:textColor="@color/bir"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioMeekness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кротость"
+            android:textSize="16sp"
+            android:textColor="@color/bir"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите языки любви:"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutLoveLanguages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <Button
+        android:id="@+id/btnSaveLovePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Сохранить"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:background="@drawable/itembrightbtn"/>
+</LinearLayout>

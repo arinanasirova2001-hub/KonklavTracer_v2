@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/proz"
+    android:layout_marginBottom="8dp"
+    android:padding="12dp">
+
+    <!-- Название аспекта -->
+    <TextView
+        android:id="@+id/tvAspectName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Аспект"
+        android:textSize="16sp"
+        android:textColor="@color/bir"/>
+
+    <!-- Кнопка минус -->
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@color/darkbir"
+        android:background="@color/bir"
+        android:padding="0dp"/>
+
+    <!-- Значение -->
+    <TextView
+        android:id="@+id/tvAspectValue"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:textColor="@color/bir"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <!-- Кнопка плюс -->
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@color/darkbir"
+        android:background="@color/bir"
+        android:padding="0dp"/>
+</LinearLayout>

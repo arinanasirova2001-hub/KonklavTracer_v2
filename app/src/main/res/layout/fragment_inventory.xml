@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background">
+
+    <!-- Кнопки управления категориями -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnAddCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+ Папка"
+            android:textSize="14sp"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"/>
+
+        <Button
+            android:id="@+id/btnDeleteCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="− Папка"
+            android:textSize="14sp"
+            android:textColor="@color/bir"
+            android:background="@drawable/itembrightbtn"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/itembrightbtn"/>
+    </LinearLayout>
+
+    <!-- Фильтр "Только экипированное" -->
+    <CheckBox
+        android:id="@+id/cbFilterEquipped"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Только экипированное"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"/>
+
+    <!-- Кнопка добавления предмета -->
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="+ Добавить предмет"
+        android:textSize="16sp"
+        android:textColor="@color/bir"
+        android:background="@drawable/itembrightbtn"
+        android:padding="12dp"/>
+
+    <!-- Список предметов -->
+    <ListView
+        android:id="@+id/lvInventory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="8dp"/>
+</LinearLayout>

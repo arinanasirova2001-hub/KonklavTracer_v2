@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/itembrightbtn"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заголовок"
+        android:textSize="18sp"
+        android:textColor="@color/bir"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvNotePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Превью..."
+        android:textSize="14sp"
+        android:textColor="@color/bir"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingTop="4dp"/>
+</LinearLayout>
